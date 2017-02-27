@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta chartset="UTF-8">
+    <title>Django Quote</title>
+</head>
+<body>
+    <h1>A List of Quotes!</h1>
+    <h3>Below is a list of various quotes displayed through a for loop from a model.</h3>
+    <h3>Enjoy!</h3>
+    <hr>
+    {% block content %}
+        {% for quote in quote_list %}
+            <p><strong>Author: </strong>{{ quote.author }}</p>
+            <p><strong>Quote: </strong>{{ quote.quote }}</p>
+            <hr>
+        {% endfor %}
+    {% endblock %}
+</body>
+</html>

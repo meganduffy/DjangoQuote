@@ -13,4 +13,5 @@ class Quote(models.Model):
     quote = models.CharField(max_length=500)
 
     def __str__(self):
-        return self.author
+        return '- '.join([self.author,
+                        self.quote])
